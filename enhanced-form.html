@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IronFit Gym - Registration</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    header, section, footer {
+      margin-bottom: 30px;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      color: #c0392b; /* Gym theme red */
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 15px 0;
+    }
+    table, th, td {
+      border: 1px solid #aaa;
+      padding: 10px;
+      text-align: center;
+    }
+    fieldset {
+      margin-bottom: 20px;
+      padding: 15px;
+      border: 2px solid #c0392b;
+      border-radius: 8px;
+    }
+    legend {
+      font-weight: bold;
+      color: #c0392b;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 4px;
+      border: 1px solid #aaa;
+      border-radius: 4px;
+    }
+    input[type="submit"] {
+      width: auto;
+      background-color: #c0392b;
+      color: white;
+      cursor: pointer;
+      border: none;
+      padding: 10px 15px;
+      font-size: 16px;
+    }
+    input[type="submit"]:hover {
+      background-color: #a93226;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>IronFit Gym</h1>
+    <p>Your Strength. Your Journey. Your Gym.</p>
+  </header>
+
+  <!-- Programs (Lists) -->
+  <section>
+    <h2>Our Training Programs</h2>
+    <ul>
+      <li>Strength Training</li>
+      <li>Cardio & HIIT</li>
+      <li>Yoga & Flexibility</li>
+      <li>CrossFit</li>
+    </ul>
+
+    <h3>Basic Warm-up Steps (Follow in order)</h3>
+    <ol>
+      <li>5 min treadmill walk</li>
+      <li>Dynamic stretches</li>
+      <li>Light push-ups & squats</li>
+      <li>Hydrate before starting</li>
+    </ol>
+  </section>
+
+  <!-- Class Schedule (Table) -->
+  <section>
+    <h2>Weekly Class Schedule</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th>Class</th>
+          <th>Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Monday</td>
+          <td>Strength Training</td>
+          <td>7:00 AM - 8:00 AM</td>
+        </tr>
+        <tr>
+          <td>Wednesday</td>
+          <td>HIIT Cardio</td>
+          <td>6:00 PM - 7:00 PM</td>
+        </tr>
+        <tr>
+          <td>Friday</td>
+          <td>Yoga Flow</td>
+          <td>5:00 PM - 6:00 PM</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Media Section -->
+  <section>
+    <h2>Gym Inspiration</h2>
+    <figure>
+      <img src="https://via.placeholder.com/500x250" alt="IronFit Gym">
+      <figcaption>Stay strong. Stay consistent.</figcaption>
+    </figure>
+    <video controls width="400">
+      <source src="sample-workout.mp4" type="video/mp4">
+      Your browser does not support the video element.
+    </video>
+    <audio controls>
+      <source src="gym-music.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </section>
+
+  <!-- Registration Form -->
+  <section>
+    <h2>Membership Registration</h2>
+    <form action="#" method="post">
+      <fieldset>
+        <legend>Personal Details</legend>
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" required minlength="3" placeholder="John Doe">
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required placeholder="example@gym.com">
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" pattern="^[0-9]{10}$" placeholder="10-digit number" required>
+      </fieldset>
+
+      <fieldset>
+        <legend>Membership Options</legend>
+        <label>
+          <input type="radio" name="plan" value="basic" required> Basic Plan
+        </label>
+        <label>
+          <input type="radio" name="plan" value="premium"> Premium Plan
+        </label>
+        <label>
+          <input type="radio" name="plan" value="vip"> VIP Plan
+        </label>
+
+        <label for="duration">Duration:</label>
+        <select id="duration" name="duration" required>
+          <option value="">--Select--</option>
+          <option value="1month">1 Month</option>
+          <option value="3months">3 Months</option>
+          <option value="1year">1 Year</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Login Details</legend>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required pattern="^[A-Za-z0-9_]{5,15}$" placeholder="5-15 letters/numbers">
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required minlength="6">
+
+        <label for="confirm">Confirm Password:</label>
+        <input type="password" id="confirm" name="confirm" required minlength="6">
+      </fieldset>
+
+      <fieldset>
+        <legend>Additional Information</legend>
+        <label for="goals">Fitness Goals:</label>
+        <textarea id="goals" name="goals" rows="4" placeholder="E.g., Lose weight, build muscle, improve stamina"></textarea>
+      </fieldset>
+
+      <input type="submit" value="Join Now">
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 IronFit Gym | Contact: info@ironfit.com</p>
+  </footer>
+</body>
+</html>
